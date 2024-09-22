@@ -49,15 +49,15 @@ del.addEventListener('click', () => {
 
 change.addEventListener('click', () => {
 	if (operator === '') {
-		if (parseFloat(firstValue) !== 0) {
+		if (firstValue !== '' && parseFloat(firstValue) !== 0) {
 			firstValue = (parseFloat(firstValue) * -1).toString()
 		}
-		display.value = firstValue
+		display.value = firstValue || '0'
 	} else {
-		if (parseFloat(secondValue) !== 0) {
+		if (secondValue !== '' && parseFloat(secondValue) !== 0) {
 			secondValue = (parseFloat(secondValue) * -1).toString()
 		}
-		display.value = secondValue
+		display.value = secondValue || '0'
 	}
 })
 
