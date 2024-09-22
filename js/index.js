@@ -50,19 +50,23 @@ comma.addEventListener('click', () => {
 numbers.forEach(number => {
 	number.addEventListener('click', () => {
 		if (operator === '') {
-			if (firstValue === '' && number.id === '0') {
-				firstValue = '0'
-			} else {
-				firstValue += number.id
+			if (firstValue.length < 12) {
+				if (firstValue === '' && number.id === '0') {
+					firstValue = '0'
+				} else {
+					firstValue += number.id
+				}
+				display.value = firstValue
 			}
-			display.value = firstValue
 		} else {
-			if (secondValue === '' && number.id === '0') {
-				secondValue = '0'
-			} else {
-				secondValue += number.id
+			if (secondValue.length < 12) {
+				if (secondValue === '' && number.id === '0') {
+					secondValue = '0'
+				} else {
+					secondValue += number.id
+				}
+				display.value = secondValue
 			}
-			display.value = secondValue
 		}
 	})
 })
@@ -82,7 +86,7 @@ minus.addEventListener('click', () => {
 })
 
 divide.addEventListener('click', () => {
-	if (firstValue !== '' || secondValue !== '0') {
+	if (firstValue !== '') {
 		operator = 'divide'
 		subDisplay.innerHTML = firstValue + ' ÷ '
 	}
