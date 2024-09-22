@@ -63,6 +63,10 @@ body {
 	color: #6b6b6b;
 }
 
+.hide {
+	display: none;
+}
+
 .section-button {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -122,5 +126,4 @@ body {
 	grid-column: 3 / -1;
 	width: 140px;
 	border-radius: 140px;
-	background-color: #7f45e2;
 }

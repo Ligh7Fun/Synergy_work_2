@@ -11,44 +11,37 @@
 	<body>
 		<div class="content">
 			<div class="section-display">
-				<input
-					class="display"
-					type="text"
-					value="1001002003.2"
-					id="display"
-					readonly
-				/>
+				<input class="display" type="text" value="4" id="display" readonly />
 				<span class="sub-display" id="subDisplay"></span>
-				<span class="display-operator" id="displayOperator">=</span>
+				<span class="display-operator hide" id="displayOperator">=</span>
 			</div>
 
 			<div class="section-button">
-				<button class="button button-operator button-double-ce" id="button-1">
+				<button class="button button-operator button-double-ce" id="ce">
 					CE
 				</button>
-				<button class="button button-operator" id="button-2">%</button>
-				<button class="button button-operator" id="button-3">÷</button>
-				<button class="button" id="button-4">7</button>
-				<button class="button" id="button-5">8</button>
-				<button class="button" id="button-6">9</button>
-				<button class="button button-operator" id="button-7">*</button>
-				<button class="button" id="button-8">4</button>
-				<button class="button" id="button-9">5</button>
-				<button class="button" id="button-10">6</button>
-				<button class="button button-operator" id="button-11">−</button>
-				<button class="button" id="button-12">1</button>
-				<button class="button" id="button-13">2</button>
-				<button class="button" id="button-14">3</button>
-				<button class="button button-operator" id="button-15">+</button>
-				<button class="button" id="button-16">0</button>
-				<button class="button" id="button-17">,</button>
-				<button
-					class="button button-operator button-double-equal"
-					id="button-18"
-				>
+				<button class="button button-operator" id="mod">%</button>
+				<button class="button button-operator" id="divide">÷</button>
+				<button class="button number" id="7">7</button>
+				<button class="button number" id="8">8</button>
+				<button class="button number" id="9">9</button>
+				<button class="button button-operator" id="multiply">×</button>
+				<button class="button number" id="4">4</button>
+				<button class="button number" id="5">5</button>
+				<button class="button number" id="6">6</button>
+				<button class="button button-operator" id="minus">−</button>
+				<button class="button number" id="1">1</button>
+				<button class="button number" id="2">2</button>
+				<button class="button number" id="3">3</button>
+				<button class="button button-operator" id="plus">+</button>
+				<button class="button number" id="0">0</button>
+				<button class="button" id="comma">,</button>
+				<button class="button button-operator button-double-equal" id="equal">
 					=
 				</button>
 			</div>
 		</div>
+
+		<script src="./js/index.js"></script>
 	</body>
 </html>
