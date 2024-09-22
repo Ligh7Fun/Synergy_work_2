@@ -15,6 +15,7 @@ const plus = document.querySelector('#plus')
 const equal = document.querySelector('#equal')
 const comma = document.querySelector('#comma')
 const del = document.querySelector('#del')
+const change = document.querySelector('#change')
 const numbers = document.querySelectorAll('.number')
 
 ce.addEventListener('click', () => {
@@ -43,6 +44,20 @@ del.addEventListener('click', () => {
 			display.value = '0'
 			secondValue = ''
 		}
+	}
+})
+
+change.addEventListener('click', () => {
+	if (operator === '') {
+		if (parseFloat(firstValue) !== 0) {
+			firstValue = (parseFloat(firstValue) * -1).toString()
+		}
+		display.value = firstValue
+	} else {
+		if (parseFloat(secondValue) !== 0) {
+			secondValue = (parseFloat(secondValue) * -1).toString()
+		}
+		display.value = secondValue
 	}
 })
 
