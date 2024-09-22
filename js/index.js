@@ -14,6 +14,7 @@ const minus = document.querySelector('#minus')
 const plus = document.querySelector('#plus')
 const equal = document.querySelector('#equal')
 const comma = document.querySelector('#comma')
+const del = document.querySelector('#del')
 const numbers = document.querySelectorAll('.number')
 
 ce.addEventListener('click', () => {
@@ -23,6 +24,26 @@ ce.addEventListener('click', () => {
 	display.value = '0'
 	subDisplay.innerHTML = ''
 	displayOperator.classList.add('hide')
+})
+
+del.addEventListener('click', () => {
+	if (operator === '') {
+		if (firstValue.length > 1) {
+			firstValue = firstValue.slice(0, -1)
+			display.value = firstValue
+		} else {
+			display.value = '0'
+			firstValue = ''
+		}
+	} else {
+		if (secondValue.length > 1) {
+			secondValue = secondValue.slice(0, -1)
+			display.value = secondValue
+		} else {
+			display.value = '0'
+			secondValue = ''
+		}
+	}
 })
 
 comma.addEventListener('click', () => {
